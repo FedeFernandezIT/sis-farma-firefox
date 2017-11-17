@@ -23,7 +23,10 @@ namespace GeckoBrowserWpf
         public MainWindow()
         {
             InitializeComponent();
-            Gecko.Xpcom.Initialize("Firefox");            
+            Gecko.Xpcom.Initialize("Firefox");
+            this.Topmost = true;
+            this.WindowState = WindowState.Maximized;
+            this.WindowStyle = WindowStyle.None;
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
